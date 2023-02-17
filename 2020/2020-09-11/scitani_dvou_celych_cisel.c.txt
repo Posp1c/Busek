@@ -1,0 +1,14 @@
+#include <stdio.h>  /* printf, scanf */
+
+int a = 0;
+int b = 0;
+
+int main () {
+    printf("Zadej cislo a: ");
+    int debug = scanf("%d", &a);
+    printf("scanf vratilo %i\n", debug);
+    printf("Zadej cislo b: ");
+    scanf("%d", &b);
+    printf("Soucet %d a %d je %d.\n", a, b, a + b);
+    return 0;
+}

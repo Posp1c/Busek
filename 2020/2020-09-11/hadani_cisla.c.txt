@@ -1,0 +1,32 @@
+#include <stdio.h>  /* printf, scanf */
+#include <stdlib.h> /* rand, srand */
+#include <time.h>   /* time */
+
+int main () {
+    
+    srand(time(NULL));
+    
+    // vygeneruje nahodne cislo
+    int n = rand() % 1000 + 1;
+    
+    // inicializuj uhodnute cislo
+    int g = -1;
+    
+    // inicializuj pocet pokusu
+    int i = 0;
+
+    do {
+        printf("Hadej cislo: ");
+        scanf("%d", &g);
+        if (g < n) {
+            printf("To je malo.\n");
+        } else if (g > n) {
+            printf("To je moc.\n");
+        }
+        i++;
+    } while (g != n);
+    
+    printf("Hura, povedlo se ti to po %d pokusech. Cislo je opravdu %d.\n", i, n);
+        
+    return 0;
+}
